@@ -19,6 +19,6 @@ Folder contains saparate GPR Models fitted for each parameters and related files
  use this file if MATLAB is not intalled in the system. However, this MATLAB Runtime must be installed already. To know more. 
  
  ## Documentation
-  [Getting Stared](Doc/Getting Started.md)
+ [Getting Stared](https://github.com/Satwikpr/Backbone_GPR/blob/8a95b87981f280dd13bcff2edcb9fc7f5ed32d5b/Doc/Getting%20Started.md)
 
 # Reference
