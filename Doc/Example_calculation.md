@@ -11,79 +11,112 @@ The column is designed to resist the factored axial load of 685 kN. Here, a colu
 Based on the standard cylinder test, the compressive strength of unconfined concrete is 5 ksi (≈34.5 MPa). At the same time, the yield stress of longitudinal and transverse reinforcement is 67 ksi (≈462 MPa) and 60 ksi (≈414 MPa), respectively. 
 
   ## Inputs for Option 1 – Using Basic Parameters
-  Cross section depth - mm (*H*) = 560
+1. Cross section depth - mm (*H*) = 560
   
-  Cross section width - mm (*B*) = 560
+2. Cross section width - mm (*B*) = 560
   
-Effective depth - mm (*d*) = 495 
+3. Effective depth - mm (*d*) = 495 
   
-*d* = 560 – 65 = 495 mm
+	*d* = 560 – 65 = 495 mm
   
-Distance of the center of the rebar from the extreme fiber -mm(*d'*) = 65 
+4. Distance of the center of the rebar from the extreme fiber -mm(*d'*) = 65 
   
-Shear Span – mm (*L<sub>s</sub>*) = 2000 
+5. Shear Span – mm (*L<sub>s</sub>*) = 2000 
  
-For fixed-fixed case, *L<sub>s</sub>*= (Length of column (*L*))/2=4000/2=2000 mm
+	For fixed-fixed case, *L<sub>s</sub>*= (Length of column (*L*))/2=4000/2=2000 mm
   
-Concrete compressive strength -MPa (*f<sub>c</sub>*) = 34.5 
+6. Concrete compressive strength -MPa (*f<sub>c</sub>*) = 34.5 
   
-Longitudinal reinforcement yield strength -MPa (*f<sub>y</sub>*) = 492 
+7. Longitudinal reinforcement yield strength -MPa (*f<sub>y</sub>*) = 492 
   
-Axial load- kN (*P*) = 685 
+8. Axial load- kN (*P*) = 685 
   
-Number of rebars in tension zone (*N<sub>t</sub>*) = 5
+9. Number of rebars in tension zone (*N<sub>t</sub>*) = 5
 
-Number of rebars in compression zone (*N<sub>c</sub>*) = 5
+10. Number of rebars in compression zone (*N<sub>c</sub>*) = 5
 	
-Maximum diameter of longitudinal rebar - mm (*d<sub>b</sub>*) = 22.225 
+11. Maximum diameter of longitudinal rebar - mm (*d<sub>b</sub>*) = 22.225 
 	
-Maximum diameter of transverse ties - mm (*d<sub>t</sub>*) = 12.7 
+12. Maximum diameter of transverse ties - mm (*d<sub>t</sub>*) = 12.7 
 	
-Number of transverse ties (*N<sub>t</sub>*) = 5
+13. Number of transverse ties (*N<sub>t</sub>*) = 5
 	
-Transverse reinforcement yield stress - MPa (*f<sub>y,sh</sub>*) = 685
+14. Transverse reinforcement yield stress - MPa (*f<sub>y,sh</sub>*) = 685
 	
-Transverse reinforcement spacing - mm (s) = 125
+15. Transverse reinforcement spacing - mm (s) = 125
 	
-Indicator variable for the possibility of rebar slip (*α<sub>sl</sub>*) =1
+16. Indicator variable for the possibility of rebar slip (*α<sub>sl</sub>*) =1
   
 ## Inputs for Option 2 – Using Derived Parameters 
 
-Shear span to effective depth ratio (Ls/H) = 3.57
-  
-  L_s=2000 mm (fixed-fixed);H=560 mm;L_s/H=3.57
-  
- Axial load ratio  (v) 
-Gross cross section area A=B×H=560^2=313660 mm^2
-	Axial load (P)=685 kN
-	Concrete compressive strength (f_c )=34.5 Mpa
-	Axial load ratio (v)=P/(f_c A_g )=685000/(34.5× 313660 )=0.0633
-	Concrete compressive strength -MPa (fc) = 34.5 
-	Longitudinal reinforcement yield strength -MPa (fy) = 492 
-	Longitudinal reinforcement ratio (ρ) = 0.014
-	Number of rebars in tension zone (N_t )= 5
-	Number of rebars in compression zone (N_c )
-	Diameter of bar (d_b )= 22.225 mm
-	Tensile reinforcemnt ratio(ρ_t )=compression.reinforcement ratio (ρ_c )
-	ρ_t=ρ_c=(N_t (π/4 d_b^2 ))/A_g =0.007;
-	ρ= ρ_t+ρ_c=0.014 
-	Shear Span (Ls) = 2000 
-	For fixed-fixed condition,L_s=(Length of the member (L))/2=4000/2=2000 mm
-	   Maximum diameter of longitudinal rebar - mm (db) = 22.225 
-	   Rebar buckling coefficient (Sn)
-	Tranverse ties spacing (s)= 125 mm;f_y=462 MPa;d_b=22.225 mm
-	s_n=s/d_b  (f_y/100)^0.5=12.05
-	   Transverse reinforcement area - sq. mm (Ash) = 
-	Diameter of tranverse bar (d_sh )= 12.7 mm; 
-	 Number of transverse ties (N_sh )= 5
-	A_sh=N_sh  π/4 d_sh^2=633.38 mm^2  
-	   Transverse reinforcement ratio (ρsh) 
-	ρ_sh=A_sh/bs=0.009
-	   Effective transverse reinforcement ratio (ρsh,eff)
-	ρ_(sh,eff)=ρ_sh  f_(y,sh)/f_c =0.106
-	   Transverse reinforcement yield stress - MPa (fy,sh) = 685
-	   Indicator variable for the possibility of rebar slip (αsl) =1\
-	   Cross-sectional area (A) = 313660 mm^2
+1. Shear span to effective depth ratio (*L<sub>s</sub>/H*) = 3.57
+	
+	*L<sub>s</sub>*=2000 mm (fixed-fixed);*H*=560 mm;*L<sub>s</sub>/H*=3.57
+	
+2. Axial load ratio (*v*) = 0.0633
+	
+   * Gross cross section area *A*=*B*×*H*=560<sup>2</sup>=313660 mm<sup>2</sup>
+
+   * Axial load (*P*)=685 kN
+	
+   * Concrete compressive strength (*f<sub>c</sub>*)=34.5 Mpa
+	
+   * Axial load ratio (v)= *P*/(*f<sub>c</sub>*×*A<sub>g</sub>*) =685000/(34.5×313660)=0.0633
+
+3. Concrete compressive strength -MPa (*f<sub>c</sub>*) = 34.5 
+	
+4. Longitudinal reinforcement yield strength -MPa (*f<sub>y</sub>*) = 492 
+	
+5. Longitudinal reinforcement ratio (*ρ*) = 0.014
+
+    * Number of rebars in tension zone (*N<sub>t</sub>*)= 5
+	
+    * Number of rebars in compression zone (*N<sub>t</sub>*) = 5
+     
+    * Diameter of bar (*d<sub>b</sub>*)= 22.225 mm
+	
+    * Tensile reinforcemnt ratio(*ρ<sub>t</sub>*)=compression.reinforcement ratio (*ρ<sub>c</sub>*)
+   
+    * *ρ<sub>t</sub>*=*ρ<sub>c</sub>* = (π/4×*d<sub>b</sub>*<sup>2</sup>*N<sub>t</sub>*)/*A<sub>g</sub>* =0.007
+	
+    * *ρ* = *ρ<sub>t</sub>* + *ρ<sub>c</sub>* = 0.014 
+
+6. Maximum diameter of longitudinal rebar - mm (*d<sub>b</sub>*) = 22.225 
+	
+7. Rebar buckling coefficient (*S<sub>n</sub>*)
+	
+    * Tranverse ties spacing (*s*)= 125 mm
+	
+    * *f<sub>y</sub>*=462 MPa;*d<sub>b</sub>*=22.225 mm
+	
+    * *S<sub>n</sub>*= (*s*/*d<sub>b</sub>*)×(*f<sub>y</sub>*/100)<sup>0.5</sup>=12.05
+	
+8. Transverse reinforcement area - sq. mm (*A<sub>sh</sub>*) = 
+    * Diameter of tranverse bar (*d<sub>sh</sub>*)= 12.7 mm; 
+	
+    * Number of transverse ties (*N<sub>sh</sub>*)= 5
+	
+    * *A<sub>sh</sub>*=(π/4×*d<sub>sh</sub>*<sup>2</sup>*N<sub>sh</sub>*)=633.38 mm<sup>2</sup>
+	
+9. Transverse reinforcement ratio (*ρ<sub>sh</sub>*) = 0.009
+    
+    * *ρ<sub>sh</sub>*=*A<sub>sh</sub>*/*b<sub>s</sub>*=0.009
+	
+10. Effective transverse reinforcement ratio (*ρ<sub>sh,eff</sub>*)= 0.106
+	
+    * *ρ<sub>sh,eff</sub>*=*ρ<sub>sh</sub>* × *f<sub>y,sh</sub>*/*f<sub>c</sub>* =0.106
+	
+11. Transverse reinforcement yield stress - MPa (*f<sub>y,sh</sub>*) = 685
+
+12. Indicator variable for the possibility of rebar slip (*α<sub>sl</sub>*) =1
+	
+13. Cross-sectional area (*A*) = 313660 mm<sup>2</sup>
+
+14. Nominal Shear Capacity (*V<sub>n</sub>*) = 1282 MPa (As per ACI 316 - 016) 
+
+Additional Parameters for My
+	
+15. 
 
 
 
