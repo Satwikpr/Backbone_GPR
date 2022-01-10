@@ -53,8 +53,8 @@ Based on the standard cylinder test, the compressive strength of unconfined conc
 ![Screenshot (901)](https://user-images.githubusercontent.com/66442506/148811563-e0a02f9d-e7f2-4548-94ca-5258e9de3f3d.png)
 
   
-## Inputs for Option 2 – Using Derived Parameters 
-
+# Option 2 – Using Derived Parameters 
+## Inputs
 
 1. Cross section depth - mm (*H*) = 560
   
@@ -141,7 +141,8 @@ Additional Parameters for My
     * *ρ<sub>comb</sub>* = 0.0059
 	
 ## Implementation
-	![Screenshot (904)](https://user-images.githubusercontent.com/66442506/148815690-01d0791f-ee2a-4b7a-96aa-2602fb904fba.png)
+
+![Screenshot (904)](https://user-images.githubusercontent.com/66442506/148815690-01d0791f-ee2a-4b7a-96aa-2602fb904fba.png)
 
 	
 
