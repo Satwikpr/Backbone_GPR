@@ -50,6 +50,8 @@ Based on the standard cylinder test, the compressive strength of unconfined conc
 	
 ## Implementation
 
+**Press 'Calculate'**
+
 ![Screenshot (901)](https://user-images.githubusercontent.com/66442506/148811563-e0a02f9d-e7f2-4548-94ca-5258e9de3f3d.png)
 
   
@@ -142,6 +144,7 @@ Additional Parameters for My
 	
 ## Implementation
 
+**Press 'Calculate'**
 ![Screenshot (904)](https://user-images.githubusercontent.com/66442506/148815690-01d0791f-ee2a-4b7a-96aa-2602fb904fba.png)
 
 	
