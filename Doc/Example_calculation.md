@@ -10,7 +10,8 @@ The column is designed to resist the factored axial load of 685 kN. Here, a colu
 
 Based on the standard cylinder test, the compressive strength of unconfined concrete is 5 ksi (≈34.5 MPa). At the same time, the yield stress of longitudinal and transverse reinforcement is 67 ksi (≈462 MPa) and 60 ksi (≈414 MPa), respectively. 
 
-  ## Inputs for Option 1 – Using Basic Parameters
+# Option 1 – Using Basic Parameters
+## Inputs 
 1. Cross section depth - mm (*H*) = 560
   
 2. Cross section width - mm (*B*) = 560
@@ -46,8 +47,28 @@ Based on the standard cylinder test, the compressive strength of unconfined conc
 15. Transverse reinforcement spacing - mm (s) = 125
 	
 16. Indicator variable for the possibility of rebar slip (*α<sub>sl</sub>*) =1
+	
+## Implementation
+
+![Screenshot (901)](https://user-images.githubusercontent.com/66442506/148811563-e0a02f9d-e7f2-4548-94ca-5258e9de3f3d.png)
+
   
 ## Inputs for Option 2 – Using Derived Parameters 
+
+
+1. Cross section depth - mm (*H*) = 560
+  
+2. Cross section width - mm (*B*) = 560
+  
+3. Effective depth - mm (*d*) = 495 
+
+3. Concrete compressive strength -MPa (*f<sub>c</sub>*) = 34.5 
+	
+4. Longitudinal reinforcement yield strength -MPa (*f<sub>y</sub>*) = 462 
+
+11. Transverse reinforcement yield stress - MPa (*f<sub>y,sh</sub>*) = 411
+	
+6. Maximum diameter of longitudinal rebar - mm (*d<sub>b</sub>*) = 22.225 
 
 1. Shear span to effective depth ratio (*L<sub>s</sub>/H*) = 3.57
 	
@@ -63,9 +84,12 @@ Based on the standard cylinder test, the compressive strength of unconfined conc
 	
    * Axial load ratio (v)= *P*/(*f<sub>c</sub>*×*A<sub>g</sub>*) =685000/(34.5×313660)=0.0633
 
-3. Concrete compressive strength -MPa (*f<sub>c</sub>*) = 34.5 
+8. Transverse reinforcement area - sq. mm (*A<sub>sh</sub>*) = 
+    * Diameter of tranverse bar (*d<sub>sh</sub>*)= 12.7 mm; 
 	
-4. Longitudinal reinforcement yield strength -MPa (*f<sub>y</sub>*) = 492 
+    * Number of transverse ties (*N<sub>sh</sub>*)= 5
+	
+    * *A<sub>sh</sub>*=(π/4×*d<sub>sh</sub>*<sup>2</sup>*N<sub>sh</sub>*)=633.38 mm<sup>2</sup>
 	
 5. Longitudinal reinforcement ratio (*ρ*) = 0.014
 
@@ -80,23 +104,6 @@ Based on the standard cylinder test, the compressive strength of unconfined conc
     * *ρ<sub>t</sub>*=*ρ<sub>c</sub>* = (π/4×*d<sub>b</sub>*<sup>2</sup>*N<sub>t</sub>*)/*A<sub>g</sub>* =0.007
 	
     * *ρ* = *ρ<sub>t</sub>* + *ρ<sub>c</sub>* = 0.014 
-
-6. Maximum diameter of longitudinal rebar - mm (*d<sub>b</sub>*) = 22.225 
-	
-7. Rebar buckling coefficient (*S<sub>n</sub>*)
-	
-    * Tranverse ties spacing (*s*)= 125 mm
-	
-    * *f<sub>y</sub>*=462 MPa;*d<sub>b</sub>*=22.225 mm
-	
-    * *S<sub>n</sub>*= (*s*/*d<sub>b</sub>*)×(*f<sub>y</sub>*/100)<sup>0.5</sup>=12.05
-	
-8. Transverse reinforcement area - sq. mm (*A<sub>sh</sub>*) = 
-    * Diameter of tranverse bar (*d<sub>sh</sub>*)= 12.7 mm; 
-	
-    * Number of transverse ties (*N<sub>sh</sub>*)= 5
-	
-    * *A<sub>sh</sub>*=(π/4×*d<sub>sh</sub>*<sup>2</sup>*N<sub>sh</sub>*)=633.38 mm<sup>2</sup>
 	
 9. Transverse reinforcement ratio (*ρ<sub>sh</sub>*) = 0.009
     
@@ -106,17 +113,37 @@ Based on the standard cylinder test, the compressive strength of unconfined conc
 	
     * *ρ<sub>sh,eff</sub>*=*ρ<sub>sh</sub>* × *f<sub>y,sh</sub>*/*f<sub>c</sub>* =0.106
 	
-11. Transverse reinforcement yield stress - MPa (*f<sub>y,sh</sub>*) = 685
+7. Rebar buckling coefficient (*S<sub>n</sub>*)
+	
+    * Tranverse ties spacing (*s*)= 125 mm
+	
+    * *f<sub>y</sub>*=462 MPa;*d<sub>b</sub>*=22.225 mm
+	
+    * *S<sub>n</sub>*= (*s*/*d<sub>b</sub>*)×(*f<sub>y</sub>*/100)<sup>0.5</sup>=12.05
 
 12. Indicator variable for the possibility of rebar slip (*α<sub>sl</sub>*) =1
 	
-13. Cross-sectional area (*A*) = 313660 mm<sup>2</sup>
-
 14. Nominal Shear Capacity (*V<sub>n</sub>*) = 1282 MPa (As per ACI 316 - 016) 
 
 Additional Parameters for My
 	
-15. 
+17. Yield Curvature (*ϕ<sub>y</sub>*) = 7e-6 (as per Pengiotakos and Fardis 2001)
+
+18. Compression zone depth (*k<sub>y</sub>*) = 0.32 (as per Pengiotakos and Fardis 2001)
+
+19. *δ'* = 0.13
+    * Distance of the center of the rebar from the extreme fiber -mm(*d'*) = 65
+    * *δ'* = d'/d = 0.13
+	
+20. *ρ<sub>comb</sub>*=0.0059 
+    * *ρ<sub>comb</sub>*=(1-*k<sub>y</sub>*)*ρ<sub>t</sub>* + (*k<sub>y</sub>*-*δ'*)*ρ<sub>t</sub>* + (1-*δ'*)*ρ<sub>v</sub>*/6
+    * *ρ<sub>v</sub>* = web reinforcement ratio =0 
+    * *ρ<sub>comb</sub>* = 0.0059
+	
+## Implementation
+	![Screenshot (904)](https://user-images.githubusercontent.com/66442506/148815690-01d0791f-ee2a-4b7a-96aa-2602fb904fba.png)
+
+	
 
 
 
