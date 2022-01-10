@@ -5,5 +5,5 @@ The folder [Scripts](https://github.com/Satwikpr/Backbone_GPR/tree/main/Script) 
 ## MATLAB Application
 [Backbone_GPR.mlappinstall](https://github.com/Satwikpr/Backbone_GPR/blob/b226f6902d2f71de441463df1b32fbb1397c7a77/Backbone_GPR.mlappinstall) is a package file that can be imported in MATLAB. It requires MATLAB and the necessary toolbox installed in the system. The app appears in the Apps tab in the MATLAB Toolstrip.
 ## MATLAB Standalone Desktop Application
-use this file if MATLAB is not installed in the system. However, this MATLAB Runtime must be installed already. To know more.
+[GPR_Backbone_Standalone.rar](https://github.com/Satwikpr/Backbone_GPR/blob/d5839f564182ceb70ad23e1037fc794b2f0c89ea/GPR_Backbone_Standalone.rar) use this file if MATLAB is not installed in the system. However, this MATLAB Runtime must be installed already. To know more.
 
