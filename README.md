@@ -8,3 +8,8 @@ This package predicts Reinforced Concrete Parameters based on member’s materia
 * [Example Problem](https://github.com/Satwikpr/Backbone_GPR/blob/4f2ae4870dda8bb70eea46b2892d57d67d7ef239/Doc/Example_calculation.md)
 
 # References
+1. Rayjada, S. P., Ghosh, J., Raghunandan, M. (2022), “Machine Learning-based RC Beam-Column Model Parameter Estimation
+and Uncertainty Quantification for Seismic Fragility Assessment”, (Manuscript submitted fro publication)
+2. Haselton CB, Liel AB, Taylor-lange SC, Deierlein GG. Calibration of model to simulate response of reinforced concrete beam-columns to collapse. ACI Struct J     2016;113:1141–52.https://doi.org/10.14359/51689245
+3. Panagiotakos TB, Fardis MN. Deformations of reinforced concrete members at yielding and ultimate.
+701 ACI Struct J 2001;98:135–48. https://doi.org/10.14359/10181.
