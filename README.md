@@ -1,4 +1,4 @@
-# Backbone_GPR
+# GPR_Backbone
 
 This package predicts Reinforced Concrete Parameters based on member’s material and geometric properties based on Gaussian Process Regression as proposed by Rayjada et al.(2023).These parameters include backbone curve parameters encompassing the member’s response under loading and energy dissipation. Lognormal prediction uncertainty estimates can also be obtained.
 
